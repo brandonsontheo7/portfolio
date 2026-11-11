@@ -1,0 +1,11 @@
+
+/* ---------- Work hover: blur the rest of the page ---------- */
+/* Everything at the top level of the page except the Work section. */
+.page-root > * {
+  transition: filter 500ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+html[data-work-focus] .page-root > *:not([data-work-root]) {
+  filter: blur(10px);
+  opacity: 0.55;
+}

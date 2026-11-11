@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+/* ---------- Design tokens (design.md §2–4) ---------- */
+:root {
+  --bg: #faf8f5;
+  --ink: #141414;
+  --ink-muted: #5a5a5a;
+  --line: #e5e2dd;
+  --accent: #c4512d;
+}
+
+/* Tailwind CSS v4 directive; suppress generic unknown-at-rule linting. */
+/* stylelint-disable at-rule-no-unknown */
+@theme inline {
+  /* Colors → bg-bg, text-ink, text-ink-muted, border-line, bg-accent */
+  --color-bg: var(--bg);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+
+  /* Typography scale → text-hero, text-work, text-h2, text-body, text-label */
+  --text-hero: clamp(3rem, 8vw, 7rem);
+  --text-hero--line-height: 1;
+  --text-hero--font-weight: 700;
+
+  --text-work: clamp(2rem, 5vw, 4rem);
+  --text-work--line-height: 1.1;
+  --text-work--font-weight: 600;
+
+  --text-h2: clamp(1.75rem, 3vw, 2.5rem);
+  --text-h2--line-height: 1.2;
+  --text-h2--font-weight: 600;
+
+  --text-body: 1.0625rem;
+  --text-body--line-height: 1.6;
+
+  --text-label: 0.8125rem;
+  --text-label--line-height: 1.4;
+  --text-label--font-weight: 500;
+  --text-label--letter-spacing: 0.06em;
+
+  /* Layout → max-w-page, py-section, py-section-sm */
+  --container-page: 1200px;
+  --spacing-section: 8rem;
+  --spacing-section-sm: 5rem;
+
+  --radius-cta: 4px;
+}
+/* stylelint-enable at-rule-no-unknown */
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Keyboard focus (design.md §7) */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Label style: uppercase, tracking +0.06em */
+.label {
+  font-size: var(--text-label);
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Custom cursor only on devices that can hover (design.md §7) */
+@media (hover: hover) and (pointer: fine) {
+  .has-custom-cursor a,
+  .has-custom-cursor button {
+    cursor: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
