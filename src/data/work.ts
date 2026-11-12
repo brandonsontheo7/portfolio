@@ -21,7 +21,7 @@ export const work: WorkItem[] = [
     title: "KUSMADI",
     role: "Case study",
     summary: "Green Energy for Data Center, AI, and Humanoid Robots Power Supply",
-    preview: "/kusmadi.jpeg",
+    preview: "/Kusmadi.jpeg",
     href: "https://kusmadi.vercel.app"
   },
   {
