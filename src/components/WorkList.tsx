@@ -139,7 +139,7 @@ export default function WorkList() {
                 <span className="hidden text-right md:block">
                   <span className="label block text-ink-muted">{item.role}</span>
                   {item.detail && (
-                    <span className="label block text-ink">{item.detail}</span>
+                    <span className="label block text-accent">{item.detail}</span>
                   )}
                   <span className="block text-body text-ink-muted">{item.summary}</span>
                 </span>
