@@ -17,15 +17,17 @@ export const work: WorkItem[] = [
     href: "https://app.notion.com/p/LANDERS-Naskah-Perancangan-Design-Paper-4143b195586781888710ce9f271c23f7", // TODO: ganti ke halaman case study saat sudah ada
   },
   {
-    id: "soon-1",
-    title: "Coming soon",
+    id: "kusmadi",
+    title: "KUSMADI",
     role: "Case study",
-    summary: "In progress",
+    summary: "Green Energy for Data Center, AI, and Humanoid Robots Power Supply",
+    preview: "/kusmadi.jpeg",
+    href: "https://kusmadi.vercel.app"
   },
   {
-    id: "soon-2",
+    id: "soon-1",
     title: "Coming soon",
-    role: "Case study",
-    summary: "In progress",
+    role: "-",
+    summary: "On progress",
   },
 ];
