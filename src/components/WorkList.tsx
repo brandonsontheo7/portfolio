@@ -115,24 +115,21 @@ export default function WorkList() {
               <>
                 <span className="flex items-baseline gap-5 md:gap-8">
                   <span
-                    className={`label w-6 shrink-0 transition-colors duration-300 ${
-                      isActive ? "text-accent" : "text-ink-muted"
-                    }`}
+                    className={`label w-6 shrink-0 transition-colors duration-300 ${isActive ? "text-accent" : "text-ink-muted"
+                      }`}
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <span
-                    className={`text-work transition-transform duration-500 ease-out ${
-                      isActive ? "translate-x-3" : "translate-x-0"
-                    }`}
+                    className={`text-work transition-transform duration-500 ease-out ${isActive ? "translate-x-3" : "translate-x-0"
+                      }`}
                   >
                     {item.title}
                     {item.href && (
                       <span
                         aria-hidden
-                        className={`ml-3 inline-block transition-colors duration-300 ${
-                          isActive ? "text-accent" : "text-ink-muted"
-                        }`}
+                        className={`ml-3 inline-block transition-colors duration-300 ${isActive ? "text-accent" : "text-ink-muted"
+                          }`}
                       >
                         ↗
                       </span>
@@ -140,7 +137,10 @@ export default function WorkList() {
                   </span>
                 </span>
                 <span className="hidden text-right md:block">
-                  <span className="label block text-ink-muted">{item.role}</span>
+                  <span className="label block text-ink-muted">
+                    {item.role}
+                    {item.detail && <span> · {item.detail}</span>}
+                  </span>
                   <span className="block text-body text-ink-muted">{item.summary}</span>
                 </span>
               </>
@@ -149,16 +149,14 @@ export default function WorkList() {
             return (
               <li
                 key={item.id}
-                className={`relative border-b border-line transition-[opacity,filter] duration-500 ${
-                  dimmed ? "opacity-40 blur-[3px]" : "opacity-100"
-                }`}
+                className={`relative border-b border-line transition-[opacity,filter] duration-500 ${dimmed ? "opacity-40 blur-[3px]" : "opacity-100"
+                  }`}
               >
                 {/* Terracotta line that sweeps in under the active row */}
                 <span
                   aria-hidden
-                  className={`pointer-events-none absolute -bottom-px left-0 h-px w-full origin-left bg-accent transition-transform duration-500 ease-out ${
-                    isActive ? "scale-x-100" : "scale-x-0"
-                  }`}
+                  className={`pointer-events-none absolute -bottom-px left-0 h-px w-full origin-left bg-accent transition-transform duration-500 ease-out ${isActive ? "scale-x-100" : "scale-x-0"
+                    }`}
                 />
                 {item.href ? (
                   <a
@@ -193,9 +191,8 @@ export default function WorkList() {
         style={{ width: PREVIEW_W, height: PREVIEW_H }}
       >
         <div
-          className={`relative h-full w-full overflow-hidden rounded-[4px] transition duration-300 ${
-            activeId ? "scale-100 opacity-100" : "scale-95 opacity-0"
-          }`}
+          className={`relative h-full w-full overflow-hidden rounded-[4px] transition duration-300 ${activeId ? "scale-100 opacity-100" : "scale-95 opacity-0"
+            }`}
         >
           {work
             .filter((w) => w.preview)
@@ -206,9 +203,8 @@ export default function WorkList() {
                 alt=""
                 fill
                 sizes={`${PREVIEW_W}px`}
-                className={`object-cover transition-opacity duration-200 ${
-                  activeId === w.id ? "opacity-100" : "opacity-0"
-                }`}
+                className={`object-cover transition-opacity duration-200 ${activeId === w.id ? "opacity-100" : "opacity-0"
+                  }`}
               />
             ))}
         </div>
