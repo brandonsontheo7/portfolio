@@ -12,7 +12,7 @@ export const work: WorkItem[] = [
   {
     id: "landers",
     title: "LANDERS",
-    role: "UI/UX Designer",
+    role: "Design & Case Study",
     summary: "Blockchain-based land trading platform",
     preview: "/landers.webp",
     href: "https://app.notion.com/p/LANDERS-Naskah-Perancangan-Design-Paper-4143b195586781888710ce9f271c23f7", // TODO: ganti ke halaman case study saat sudah ada
@@ -20,7 +20,7 @@ export const work: WorkItem[] = [
   {
     id: "kusmadi",
     title: "KUSMADI",
-    role: "Case study",
+    role: "Research and Development",
     summary: "Green Energy for Data Center, AI, and Humanoid Robots Power Supply",
     preview: "/Kusmadi.jpeg",
     href: "https://kusmadi.vercel.app"
@@ -28,7 +28,7 @@ export const work: WorkItem[] = [
   {
     id: "soon-1",
     title: "EquipLoop",
-    role: "UI/UX Designer",
+    role: "Design and Case Study",
     detail: "On progress",
     summary: "B2B platform for accessing equipment they need without purchasing or maintaining item themselves.",
   },
