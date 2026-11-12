@@ -26,8 +26,8 @@ export const work: WorkItem[] = [
   },
   {
     id: "soon-1",
-    title: "Coming soon",
-    role: "-",
-    summary: "On progress",
+    title: "EquipLoop",
+    role: "UI/UX Designer",
+    summary: "B2B platform for accessing equipment they need without purchasing or maintaining item themselves.",
   },
 ];
