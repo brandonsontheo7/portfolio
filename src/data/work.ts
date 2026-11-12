@@ -3,6 +3,7 @@ export type WorkItem = {
   title: string;
   role: string;
   summary: string;
+  detail?: string;
   preview?: string; // path in /public, 4:3
   href?: string;
 };
@@ -28,6 +29,7 @@ export const work: WorkItem[] = [
     id: "soon-1",
     title: "EquipLoop",
     role: "UI/UX Designer",
+    detail: "On progress",
     summary: "B2B platform for accessing equipment they need without purchasing or maintaining item themselves.",
   },
 ];
