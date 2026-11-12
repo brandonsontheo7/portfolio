@@ -62,7 +62,7 @@ export const services = [
 ];
 
 export const about = {
-  bio: "I'm Brandon, an Information Systems student and UI/UX researcher-designer. I focus on AI products and data-heavy platforms, and I'm building an AI-UX studio to help teams make complex technology easy to use.",
+  bio: "I'm Brandon, an Information Systems student and AI-UX Designer. I focus on AI products and data-heavy platforms, and I'm building an AI-UX studio to help teams make complex problems into simple and easy-to-use products.",
 };
 
 export const nav = { cta: "Let's talk" };
